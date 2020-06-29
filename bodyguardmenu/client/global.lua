@@ -29,6 +29,9 @@ function createbody(model) -- Function to create the ped
 		bodybip = AddBlipForEntity(ped)
 		SetBlipSprite(bodybip, Config.blip)
 		SetBlipColour(bodybip, Config.color)
+		BeginTextCommandSetBlipName("STRING")
+		AddTextComponentString("Body Guard")
+		EndTextCommandSetBlipName(bodybip)
 		for k, v in pairs(bodyguards) do
 			if v == ped then
 				existsInTable = true
